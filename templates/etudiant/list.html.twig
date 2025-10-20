@@ -1,0 +1,18 @@
+<h2>Liste des modules</h2>
+
+{% if modules is defined and modules is not empty %}
+    <table border="1" cellpadding="5">
+        <tr>
+            <th>Nom du module</th>
+            <th>Coefficient</th>
+        </tr>
+        {% for module in modules %}
+            <tr>
+                <td>{{ module.nom }}</td>
+                <td>{{ module.coef }}</td>
+            </tr>
+        {% endfor %}
+    </table>
+{% else %}
+    <p>Aucun module trouvé.</p>
+{% endif %}
